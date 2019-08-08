@@ -78,36 +78,20 @@ class App extends Component {
           });      
 /* return (
   <div className="App">
-    <Header h1="Elf Computing" h3="Laptops" h5="Customize your laptop" />
     <Main title="TECH SPECS AND CUSTOMIZATIONS" features={ features } />
     <Summary className="main_summary" title="NEW GREENLEAF 2018" features={ features } />
   </div>
-
-        <header>
-          <h1>ELF Computing</h1>
-          <h3>Laptops</h3>
-          <h5>Customize your laptop</h5>  
-        </header>
-
 ) */
     return (
       <div className="App">
-
+        <Header h1="Elf Computing" h3="Laptops" h5="Customize your laptop" />
         <main>
           <section className="main__form">
             <h3>TECH SPECS AND CUSTOMIZATIONS</h3>
             { features }
           </section>
           <section className="main__summary">
-            <h3>NEW GREENLEAF 2018</h3>
-            {summary}
-            <div className="summary__total">
-              <div className="summary__total__label">Your Price: </div>
-              <div className="summary__total__value">
-              { new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
-                  .format(total) }
-              </div>
-            </div>
+            <Summary className="main_summary" title="NEW GREENLEAF 2018" features={this.state.selected} />
           </section>
         </main>
       </div>
