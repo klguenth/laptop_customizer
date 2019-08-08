@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
+import Header from './Header/Header.js';
+import Main from './Main/Main.js';
+import Summary from './Summary/Summary.js';
+import Feature from './Feature/Feature.js';
 
 class App extends Component {
   constructor(props){
@@ -72,14 +76,23 @@ class App extends Component {
               </ul>
             </div>
           });      
+/* return (
+  <div className="App">
+    <Header h1="Elf Computing" h3="Laptops" h5="Customize your laptop" />
+    <Main title="TECH SPECS AND CUSTOMIZATIONS" features={ features } />
+    <Summary className="main_summary" title="NEW GREENLEAF 2018" features={ features } />
+  </div>
 
-    return (
-      <div className="App">
         <header>
           <h1>ELF Computing</h1>
           <h3>Laptops</h3>
           <h5>Customize your laptop</h5>  
-        </header>      
+        </header>
+
+) */
+    return (
+      <div className="App">
+
         <main>
           <section className="main__form">
             <h3>TECH SPECS AND CUSTOMIZATIONS</h3>
