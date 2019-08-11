@@ -4,7 +4,6 @@ export default function Feature(props) {
     const options = props.features[props.feature].map((item, index) => {
         const selectedClass = item.name === props.selected[props.feature].name ? 'feature__selected' : '';
         const featureClass = 'feature__option ' + selectedClass;
-        console.log(this.updateFeature);
         return (
             <li key={index} className="feature__item">
                 <div className={featureClass}
