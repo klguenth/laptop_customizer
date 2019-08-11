@@ -4,7 +4,7 @@ import Feature from '../Feature/Feature.js';
 export default function Main(props) {
     const features = Object.keys(props.features).map(key => {
         return (
-            <Feature features={props.features} feature={key} selected={props.selected} />
+            <Feature features={props.features} feature={key} selected={props.selected} updateFeature={props.updateFeature} key={props.id} />
         )
     });
 

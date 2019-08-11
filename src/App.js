@@ -68,10 +68,10 @@ class App extends Component {
         <Header h1="Elf Computing" h3="Laptops" h5="Customize your laptop" />
         <main>
           <section className="main__form">
-          <Main title="TECH SPECS AND CUSTOMIZATIONS" features={this.props.features} selected={this.state.selected} onClick={this.updateFeature}/>
+          <Main title="TECH SPECS AND CUSTOMIZATIONS" features={this.props.features} selected={this.state.selected} updateFeature={this.updateFeature} key={this.id} />
           </section>
           <section className="main__summary">
-            <Summary className="main_summary" title="NEW GREENLEAF 2018" features={this.state.selected} />
+            <Summary className="main_summary" title="NEW GREENLEAF 2018" features={this.state.selected} key={this.id} />
           </section>
         </main>
       </div>
