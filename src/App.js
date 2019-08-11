@@ -28,6 +28,7 @@ class App extends Component {
           }
       }
     }
+    this.updateFeature = this.updateFeature.bind(this)
   }
   updateFeature(feature, newValue) {
     const selected = Object.assign({}, this.state.selected);
@@ -67,7 +68,7 @@ class App extends Component {
         <Header h1="Elf Computing" h3="Laptops" h5="Customize your laptop" />
         <main>
           <section className="main__form">
-          <Main title="TECH SPECS AND CUSTOMIZATIONS" features={this.props.features} selected={this.state.selected} onClick={this.updateFeature.bind(this)}/>
+          <Main title="TECH SPECS AND CUSTOMIZATIONS" features={this.props.features} selected={this.state.selected} onClick={this.updateFeature}/>
           </section>
           <section className="main__summary">
             <Summary className="main_summary" title="NEW GREENLEAF 2018" features={this.state.selected} />
